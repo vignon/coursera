@@ -9,10 +9,10 @@ while True:
   data = s.recv(512)
   if len(data) < 1 : break
   str = data.split('\r\n')
-  print 'Content Type:', str[1]
-  print 'Content Length', str[2]
-  print 'Last Modified', str[6]
-  print 'Etag', str[7]
+  print str[1] #Content Type
+  print str[2] #Content Length
+  print str[6] #Last Modified
+  print str[7] #Etag
   break
 
 s.close()
